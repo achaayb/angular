@@ -8,6 +8,10 @@ import { ReusableComponent } from './../reusable/reusable.component';
   declarations: [ReusableComponent],
   imports: [
     CommonModule
+  ],
+  exports: [
+    ReusableComponent
   ]
 })
-export class SharedModule { }
+export class SharedModule { 
+}
