@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { OneRoutingModule } from './one-routing.module';
 import { OneComponent } from './one.component';
+import { StateService } from './../state.service'
 
 
 @NgModule({
@@ -14,4 +15,8 @@ import { OneComponent } from './one.component';
     OneRoutingModule
   ]
 })
-export class OneModule { }
+export class OneModule {
+  constructor(stateservice: StateService) {
+
+  }
+}

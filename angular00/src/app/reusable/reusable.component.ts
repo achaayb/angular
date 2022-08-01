@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StateService } from './../state.service'
 
 @Component({
   selector: 'app-reusable',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReusableComponent implements OnInit {
 
-  constructor() { }
+  constructor(stateservice: StateService) {
+
+  }
 
   ngOnInit(): void {
   }

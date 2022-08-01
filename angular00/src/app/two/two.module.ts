@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { TwoRoutingModule } from './two-routing.module';
 import { TwoComponent } from './two.component';
 
+import { StateService } from './../state.service'
+
 
 @NgModule({
   declarations: [
@@ -14,4 +16,8 @@ import { TwoComponent } from './two.component';
     TwoRoutingModule
   ]
 })
-export class TwoModule { }
+export class TwoModule {
+  constructor(stateservice: StateService) {
+
+  }
+}
