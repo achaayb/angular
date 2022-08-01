@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
  
 
 @Injectable({
@@ -11,6 +11,6 @@ export class StateService {
 
   
   constructor() {
-    this.reusableComponentState = new Subject<boolean>();
+    this.reusableComponentState = new BehaviorSubject<boolean>(true);
   }
 }

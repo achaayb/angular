@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StateService } from './../state.service'
 
 @Component({
   selector: 'app-two',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TwoComponent implements OnInit {
 
-  constructor() { }
+  checkBoxStateOne: boolean;
+
+  constructor(srv: StateService) {
+    this.checkBoxStateOne = true;
+    srv.reusableComponentState.subscribe((bool: boolean): void => { this.checkBoxStateOne = bool; })
+  }
 
   ngOnInit(): void {
   }

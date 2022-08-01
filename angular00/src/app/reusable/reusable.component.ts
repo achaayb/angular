@@ -8,8 +8,19 @@ import { StateService } from './../state.service'
 })
 export class ReusableComponent implements OnInit {
 
-  constructor(stateservice: StateService) {
+  checkBoxState: boolean
+  stateservice: StateService
 
+  constructor(srv: StateService) {
+    this.stateservice = srv
+    this.checkBoxState = true
+  }
+
+  checkBoxChanged() : boolean {
+    this.checkBoxState = !this.checkBoxState
+    this.stateservice.reusableComponentState.next(this.checkBoxState)
+    
+    return true;
   }
 
   ngOnInit(): void {
